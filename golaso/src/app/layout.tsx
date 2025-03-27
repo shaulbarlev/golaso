@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     locale: "he_IL",
     url: "https://golaso.com",
     siteName: "Golaso",
-    title: "Golaso - Your Ultimate Destination",
+    title: "גולאסו - חוויה ספורטיבית בלתי נשכחת",
     description: "גולאסו מביאים לכם חוויה ספורטיבית בלתי נשכחת",
     images: [
       {
