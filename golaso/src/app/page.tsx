@@ -3,7 +3,7 @@ import Head from "next/head";
 import { FaTiktok } from "react-icons/fa6";
 import { FaWhatsapp, FaFacebook, FaInstagram } from "react-icons/fa";
 import EventCard from "@/components/EventCard";
-
+import { LogoText } from "@/components/LogoText";
 const Home = () => {
   return (
     <>
@@ -15,9 +15,10 @@ const Home = () => {
 
       <main className="bg-white text-gray-800">
         {/* Navbar */}
-        <header className="bg-sky-400 shadow text-white">
-          <div className="max-w-7xl mx-auto px-7 py-8 flex justify-between items-center">
-            <h1 className="text-2xl font-bold">גולאסו</h1>
+        <header className="bg-sky-400 shadow text-white z-50 relative">
+          <div className="max-w-7xl mx-auto px-10 flex justify-between items-center h-20">
+            <LogoText className="w-32" />
+            {/* <h1 className="text-2xl font-bold">גולאסו</h1> */}
             <nav className="space-x-4 font-bold">
               <a href="#events" className="hover:text-blue-600">
                 אירועים
@@ -33,20 +34,20 @@ const Home = () => {
         </header>
 
         {/* Hero Section */}
-        <section className="bg-gradient-to-b from-sky-500 to-sky-300 py-20">
-          <div className="max-w-7xl mx-auto px-4 text-center">
+        <section className="bg-gradient-to-b from-sky-900 to-sky-500 py-20 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 text-center z-30 relative">
             <h2 className="text-4xl font-bold mb-4 mx-10 text-white">
               חוויה ספורטיבית ורגעים בלתי נשכחים
             </h2>
             {/* <p className="text-lg text-gray-600 mb-8">
               A short, compelling message about what you offer.
             </p> */}
-            <div className="flex justify-center space-x-6">
+            <div className="flex text-white justify-center space-x-6">
               <a
                 href="https://tiktok.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl hover:text-blue-600 transition-colors"
+                className="text-2xl hover:text-blue-600 transition-colors bg-white rounded-full p-3 text-black"
               >
                 <FaTiktok />
               </a>
@@ -54,7 +55,7 @@ const Home = () => {
                 href="https://whatsapp.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl hover:text-green-500 transition-colors"
+                className="text-2xl hover:text-green-500 transition-colors bg-white rounded-full p-3 text-black"
               >
                 <FaWhatsapp />
               </a>
@@ -62,7 +63,7 @@ const Home = () => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl hover:text-blue-800 transition-colors"
+                className="text-2xl hover:text-blue-800 transition-colors bg-white rounded-full p-3 text-black"
               >
                 <FaFacebook />
               </a>
@@ -70,14 +71,19 @@ const Home = () => {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl hover:text-pink-600 transition-colors"
+                className="text-2xl hover:text-pink-600 transition-colors bg-white rounded-full p-3 text-black"
               >
                 <FaInstagram />
               </a>
             </div>
-            <button className="text-2xl bg-lime-200 mt-8 px-7 py-4 rounded-full border-2 border-black">
-              בואו נדבר 💬
+            <button className="text-2xl text-black font-bold bg-white mt-8 px-7 py-4 rounded-full border-4 border-green-500 shadow-lg">
+              <span className="text-shadow-lg">בואו נדבר! ⚽💬</span>
             </button>
+          </div>
+          <div className="absolute top-0 left-0 w-full h-full opacity-30">
+            <video className="w-full h-auto" autoPlay muted loop>
+              <source src="/video/video1.mp4" type="video/mp4" />
+            </video>
           </div>
         </section>
 
