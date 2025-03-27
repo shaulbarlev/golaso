@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "he_IL",
-    url: "https://golaso.com",
+    url: "https://golaso.xyz",
     siteName: "Golaso",
     title: "גולאסו - חוויה ספורטיבית בלתי נשכחת",
     description: "גולאסו מביאים לכם חוויה ספורטיבית בלתי נשכחת",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Golaso - Your Ultimate Destination",
+    title: "גולאסו - חוויה ספורטיבית בלתי נשכחת",
     description: "גולאסו מביאים לכם חוויה ספורטיבית בלתי נשכחת",
     images: ["/golasologo-thumb.jpg"],
     creator: "@golaso",

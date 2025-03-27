@@ -58,7 +58,7 @@ const HeroSection = () => {
         </button>
       </div>
       <div className="absolute top-0 left-0 w-full h-full opacity-30">
-        <video className="w-full h-auto" autoPlay muted loop>
+        <video className="w-full h-auto" playsInline autoPlay muted loop>
           <source src="/video/video1.mp4" type="video/mp4" />
         </video>
       </div>
