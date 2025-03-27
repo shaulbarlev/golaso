@@ -25,14 +25,14 @@ const HeroSection = () => {
           >
             <FaTiktok />
           </a>
-          <a
+          {/* <a
             href="https://whatsapp.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-2xl text-green-500 transition-colors bg-white rounded-full p-3 text-black"
           >
             <FaWhatsapp />
-          </a>
+          </a> */}
           <a
             href="https://facebook.com"
             target="_blank"
@@ -51,7 +51,10 @@ const HeroSection = () => {
           </a>
         </div>
         <button className="text-2xl text-black font-bold bg-white mt-8 px-7 py-4 rounded-full border-4 border-green-500 shadow-lg">
-          <span className="text-shadow-lg">בואו נדבר! ⚽💬</span>
+          <span className="text-shadow-lg ml-2">לחץ כאן לאירוע מדהים!</span>
+          <div className="inline-block align-[-5px]">
+            <FaWhatsapp size={30} title="צור קשר בוואטסאפ" />
+          </div>
         </button>
       </div>
       <div className="absolute top-0 left-0 w-full h-full opacity-30">
