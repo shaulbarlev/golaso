@@ -12,6 +12,9 @@ module.exports = {
         secondary: "#0bc1df",
         accent: "#0000FF",
       },
+      fontFamily: {
+        rubik: ["Rubik", "sans-serif"],
+      },
     },
   },
   plugins: [],

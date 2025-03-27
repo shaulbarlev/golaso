@@ -4,6 +4,7 @@ import { FaTiktok } from "react-icons/fa6";
 import { FaWhatsapp, FaFacebook, FaInstagram } from "react-icons/fa";
 import EventCard from "@/components/EventCard";
 import { LogoText } from "@/components/LogoText";
+import Image from "next/image";
 const Home = () => {
   return (
     <>
@@ -17,25 +18,30 @@ const Home = () => {
         {/* Navbar */}
         <header className="bg-sky-400 shadow text-white z-50 relative">
           <div className="max-w-7xl mx-auto px-10 flex justify-between items-center h-20">
+            {/* <div className="flex items-center space-x-2"> */}
             <LogoText className="w-32" />
+            {/* <span className="text-2xl">⚽</span>
+            </div> */}
             {/* <h1 className="text-2xl font-bold">גולאסו</h1> */}
-            <nav className="space-x-4 font-bold">
-              <a href="#events" className="hover:text-blue-600">
-                אירועים
-              </a>
-              <a href="#about" className="hover:text-blue-600">
-                עלינו
-              </a>
-              <a href="#media" className="hover:text-blue-600">
-                תמונות
-              </a>
-            </nav>
+            <div className="text-2xl text-black font-bold bg-white border-5 border-green-400 px-5 py-2 rounded-full">
+              גלעד{" "}
+              <span className="inline-block align-[-4px]">
+                <FaWhatsapp size={24} title="צור קשר בוואטסאפ" />
+              </span>
+            </div>
           </div>
         </header>
 
         {/* Hero Section */}
         <section className="bg-gradient-to-b from-sky-900 to-sky-500 py-20 relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 text-center z-30 relative">
+            <Image
+              className="rounded-full mx-auto mb-10 w-40 shadow-lg border-3 border-white"
+              src="/img/golasologo-square.jpg"
+              alt="גולאסו"
+              width={400}
+              height={400}
+            />
             <h2 className="text-4xl font-bold mb-4 mx-10 text-white">
               חוויה ספורטיבית ורגעים בלתי נשכחים
             </h2>
@@ -47,7 +53,7 @@ const Home = () => {
                 href="https://tiktok.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl hover:text-blue-600 transition-colors bg-white rounded-full p-3 text-black"
+                className="text-2xl text-blue-600 transition-colors bg-white rounded-full p-3 text-black"
               >
                 <FaTiktok />
               </a>
@@ -55,7 +61,7 @@ const Home = () => {
                 href="https://whatsapp.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl hover:text-green-500 transition-colors bg-white rounded-full p-3 text-black"
+                className="text-2xl text-green-500 transition-colors bg-white rounded-full p-3 text-black"
               >
                 <FaWhatsapp />
               </a>
@@ -63,7 +69,7 @@ const Home = () => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl hover:text-blue-800 transition-colors bg-white rounded-full p-3 text-black"
+                className="text-2xl text-blue-800 transition-colors bg-white rounded-full p-3 text-black"
               >
                 <FaFacebook />
               </a>
@@ -71,7 +77,7 @@ const Home = () => {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl hover:text-pink-600 transition-colors bg-white rounded-full p-3 text-black"
+                className="text-2xl text-pink-600 transition-colors bg-white rounded-full p-3 text-black"
               >
                 <FaInstagram />
               </a>
@@ -124,7 +130,6 @@ const Home = () => {
                 חוויות ספורטיביות מרתקות ומחנכות לכל הגילאים. הוא מאמין כי דרך
                 הספורט ניתן לפתח ערכים כמו עבודת צוות, התמדה, והגינות, וליצור
                 זכרונות שילוו את המשתתפים לכל החיים.
-                <p />
               </p>
             </div>
           </div>
