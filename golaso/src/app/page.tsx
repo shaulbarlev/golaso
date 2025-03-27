@@ -15,10 +15,10 @@ const Home = () => {
 
       <main className="bg-white text-gray-800">
         {/* Navbar */}
-        <header className="bg-white shadow">
+        <header className="bg-sky-400 shadow text-white">
           <div className="max-w-7xl mx-auto px-7 py-8 flex justify-between items-center">
             <h1 className="text-2xl font-bold">גולאסו</h1>
-            <nav className="space-x-4">
+            <nav className="space-x-4 font-bold">
               <a href="#events" className="hover:text-blue-600">
                 אירועים
               </a>
