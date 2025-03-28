@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { Rubik } from "next/font/google";
+import { Varela_Round } from "next/font/google";
 import "./globals.css";
 
-const rubik = Rubik({
-  subsets: ["latin"],
-  variable: "--font-rubik",
+const varelaRound = Varela_Round({
+  subsets: ["latin", "hebrew"],
+  display: "swap",
+  variable: "--font-varela-round",
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -68,8 +70,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html dir="rtl" lang="en">
-      <body className={`${rubik.variable} antialiased`}>{children}</body>
+    <html
+      dir="rtl"
+      lang="he"
+      className={`${varelaRound.variable} font-varela-round antialiased`}
+    >
+      <body className="font-varela-round">{children}</body>
     </html>
   );
 }

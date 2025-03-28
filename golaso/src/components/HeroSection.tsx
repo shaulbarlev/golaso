@@ -13,7 +13,7 @@ const HeroSection = () => {
           width={400}
           height={400}
         />
-        <h2 className="text-4xl font-bold mb-4 mx-10 text-white">
+        <h2 className="text-4xl font-bold mb-4 mx-5 text-white">
           חוויה ספורטיבית ורגעים בלתי נשכחים
         </h2>
         <div className="flex text-white justify-center space-x-6">
@@ -50,15 +50,25 @@ const HeroSection = () => {
             <FaInstagram />
           </a>
         </div>
-        <button className="text-2xl text-black font-bold bg-white mt-8 px-7 py-4 rounded-full border-4 border-green-500 shadow-lg">
-          <span className="text-shadow-lg ml-2">לחץ כאן לאירוע מדהים!</span>
-          <div className="inline-block align-[-5px]">
-            <FaWhatsapp size={30} title="צור קשר בוואטסאפ" />
-          </div>
-        </button>
+        <div className="relative mt-8 inline-block">
+          <button className="text-xl text-black font-bold bg-sky-300 px-7 py-4 rounded-full shadow-lg border-3 border-black btn-light-sweep">
+            <span className="text-shadow-lg ml-2 relative z-10">
+              לחץ כאן לאירוע מדהים!
+            </span>
+            <div className="inline-block align-[-5px] relative z-10">
+              <FaWhatsapp size={30} title="צור קשר בוואטסאפ" />
+            </div>
+          </button>
+        </div>
       </div>
       <div className="absolute top-0 left-0 w-full h-full opacity-30">
-        <video className="w-full h-auto" playsInline autoPlay muted loop>
+        <video
+          className="w-full h-full object-cover"
+          playsInline
+          autoPlay
+          muted
+          loop
+        >
           <source src="/video/video1.mp4" type="video/mp4" />
         </video>
       </div>
