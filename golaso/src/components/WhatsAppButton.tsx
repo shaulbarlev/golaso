@@ -11,7 +11,7 @@ export function WhatsAppButton({
 }) {
   return (
     <div
-      className={`text-xl text-green-500 font-bold bg-white px-5 py-2 rounded-full ${className}`}
+      className={`text-xl text-green-500 font-bold bg-white px-5 py-2 rounded-full w-fit ${className}`}
     >
       <a href={href} className="flex items-center justify-center gap-2">
         <span className="">{text}</span>

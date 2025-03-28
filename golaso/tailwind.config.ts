@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -13,7 +13,17 @@ module.exports = {
         accent: "#0000FF",
       },
       fontFamily: {
-        rubik: ["Rubik", "sans-serif"],
+        "varela-round": ["Varela Round", "sans-serif"],
+      },
+      animation: {
+        "light-sweep": "sweep 2.5s ease-in-out infinite",
+      },
+      keyframes: {
+        sweep: {
+          "0%": { transform: "translateX(-150%)" },
+          "50%": { transform: "translateX(150%)" },
+          "100%": { transform: "translateX(-150%)" },
+        },
       },
     },
   },

@@ -17,11 +17,11 @@ const AboutSection = () => {
             המשתתפים לכל החיים.
           </p>
           <Image
-            className="mx-auto w-75"
+            className="mx-auto w-full"
             src="/img/gilad.png"
             alt="גולאסו"
-            width={400}
-            height={400}
+            width={512}
+            height={512}
           />
         </div>
       </div>
