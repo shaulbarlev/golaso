@@ -44,7 +44,7 @@ const EventsSection = () => {
       <h3 className="text-3xl font-semibold text-center mb-10">
         גולאסו מתאים לכל סוג אירוע!
       </h3>
-      <div className="max-w-7xl mx-auto px-3">
+      <div className="max-w-3xl mx-auto px-3">
         <div className="grid grid-cols-1 gap-6">
           {eventTypes.map((event) => (
             <div key={event.id}>

@@ -42,7 +42,7 @@ const EventButton: React.FC<EventButtonProps> = ({
                 src={src}
                 alt={`${title} - תמונה ${index + 1}`}
                 className="
-              w-1/2 h-48 object-cover rounded-lg p-1"
+              w-1/2 h-48 object-cover rounded-lg p-1 hover:scale-105 active:scale-105 transition-all duration-150"
               />
             ))}
           </div>
