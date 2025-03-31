@@ -1,15 +1,39 @@
-import React from "react";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
+"use client";
+import React, { useState } from "react";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { LogoText } from "@/components/LogoText";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const Header = () => {
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(true);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (latest > 150) {
+      setHidden(false);
+    } else {
+      setHidden(true);
+    }
+  });
+
   return (
-    <header className="bg-sky-400 shadow text-white z-50 relative shadow-lg">
-      <div className="max-w-7xl mx-auto px-10 flex justify-between items-center h-20">
-        <LogoText className="w-32" />
-        <WhatsAppButton text="גלעד" href="https://wa.me/972546123456" />
+    <motion.header
+      initial="hidden"
+      variants={{
+        visible: { y: 0 },
+        hidden: { y: "-100%" },
+      }}
+      animate={hidden ? "hidden" : "visible"}
+      transition={{ duration: 0.35, ease: "easeInOut" }}
+      className="text-white z-50 fixed top-0 left-0 right-0"
+    >
+      <div className="bg-sky-400 w-60 h-20 mt-5 mx-auto flex flex-row items-center justify-center rounded-full shadow-2xl">
+        <a href="#hero">
+          <LogoText className="w-26" />
+        </a>
+        <WhatsAppButton className="w-20 mr-3" text="" />
       </div>
-    </header>
+    </motion.header>
   );
 };
 

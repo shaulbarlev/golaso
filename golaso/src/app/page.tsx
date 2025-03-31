@@ -7,6 +7,10 @@ import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
+import Reccomendations from "@/components/Reccomendations";
+
+import FadeInSection from "@/components/FadeInSection";
+
 const Home = () => {
   return (
     <>
@@ -36,10 +40,19 @@ const Home = () => {
       <main className="bg-white text-gray-800">
         <Header />
         <HeroSection />
-        <EventsSection />
-        <AboutSection />
-        <ContactSection />
-        <Gallery />
+        <FadeInSection>
+          <EventsSection />
+        </FadeInSection>
+        <FadeInSection>
+          <AboutSection />
+        </FadeInSection>
+        <FadeInSection>
+          <ContactSection />
+        </FadeInSection>
+        <FadeInSection>
+          <Gallery />
+        </FadeInSection>
+        <Reccomendations />
         <Footer />
       </main>
     </>

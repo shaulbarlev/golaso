@@ -1,67 +1,79 @@
 import React from "react";
 import Image from "next/image";
 import { FaTiktok, FaWhatsapp, FaFacebook, FaInstagram } from "react-icons/fa";
+import WordFadeIn from "./WordFadeIn";
+import FadeInSlideUp from "./FadeInSlideUp";
+import FadeInScaleDown from "./FadeInScaleDown";
 
 const HeroSection = () => {
   return (
-    <section className="bg-gradient-to-b from-sky-900 to-sky-500 py-20 relative overflow-hidden">
+    <section
+      id="hero"
+      className="bg-gradient-to-b from-sky-900 to-sky-500 py-30 relative overflow-hidden h-[95vh]"
+    >
       <div className="max-w-7xl mx-auto px-4 text-center z-30 relative">
-        <Image
-          className="rounded-full mx-auto mb-10 w-40 shadow-lg border-3 border-white"
-          src="/img/golasologo-square.jpg"
-          alt="גולאסו"
-          width={400}
-          height={400}
+        <FadeInScaleDown>
+          <Image
+            className="rounded-full mx-auto mb-10 w-40 shadow-lg border-3 border-white"
+            src="/img/golasologo-square.jpg"
+            alt="גולאסו"
+            width={400}
+            height={400}
+          />
+        </FadeInScaleDown>
+        <WordFadeIn
+          startDelay={0.35}
+          text="חוויה ספורטיבית ורגעים בלתי נשכחים"
+          className="text-4xl font-bold mb-4 mx-5 text-white justify-center"
         />
-        <h2 className="text-4xl font-bold mb-4 mx-5 text-white">
-          חוויה ספורטיבית ורגעים בלתי נשכחים
-        </h2>
-        <div className="flex text-white justify-center space-x-6">
-          <a
-            href="https://tiktok.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-2xl text-blue-600 transition-colors bg-white rounded-full p-3 text-black"
-          >
-            <FaTiktok />
-          </a>
-          {/* <a
-            href="https://whatsapp.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-2xl text-green-500 transition-colors bg-white rounded-full p-3 text-black"
-          >
-            <FaWhatsapp />
-          </a> */}
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-2xl text-blue-800 transition-colors bg-white rounded-full p-3 text-black"
-          >
-            <FaFacebook />
-          </a>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-2xl text-pink-600 transition-colors bg-white rounded-full p-3 text-black"
-          >
-            <FaInstagram />
-          </a>
+        <div className="flex text-white gap-6 justify-center mt-6">
+          <FadeInSlideUp delay={1.0} className="">
+            <a
+              href="https://www.tiktok.com/@goalso.sport"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl text-blue-600 transition-colors bg-white rounded-full p-3 text-black hover:scale-110 transform duration-200 inline-block"
+            >
+              <FaTiktok />
+            </a>
+          </FadeInSlideUp>
+          <FadeInSlideUp delay={1.1} className="">
+            <a
+              href="https://www.facebook.com/share/1Y4EXWj5Zj/?mibextid=wwXIfr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl text-blue-800 transition-colors bg-white rounded-full p-3 text-black hover:scale-110 transform duration-200 inline-block"
+            >
+              <FaFacebook />
+            </a>
+          </FadeInSlideUp>
+          <FadeInSlideUp delay={1.2}>
+            <a
+              href="https://www.instagram.com/goalso.sport"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl text-pink-600 transition-colors bg-white rounded-full p-3 text-black hover:scale-110 transform duration-200 inline-block"
+            >
+              <FaInstagram />
+            </a>
+          </FadeInSlideUp>
         </div>
         <div className="relative mt-8 inline-block">
-          <button className="text-xl text-black font-bold bg-sky-300 px-7 py-4 rounded-full shadow-lg border-3 border-black btn-light-sweep">
-            <span className="text-shadow-lg ml-2 relative z-10">
-              לחץ כאן לאירוע מדהים!
-            </span>
-            <div className="inline-block align-[-5px] relative z-10">
-              <FaWhatsapp size={30} title="צור קשר בוואטסאפ" />
-            </div>
-          </button>
+          <FadeInSlideUp delay={1.5}>
+            <a href="https://wa.me/message/IG2MOYAMRYOLL1">
+              <button className="text-xl text-black font-bold bg-sky-300 px-7 py-4 rounded-full shadow-lg border-3 border-black btn-light-sweep">
+                <span className="text-shadow-lg ml-2 relative z-10">
+                  לחץ כאן לאירוע מדהים!
+                </span>
+                <div className="inline-block align-[-5px] relative z-10">
+                  <FaWhatsapp size={30} title="צור קשר בוואטסאפ" />
+                </div>
+              </button>
+            </a>
+          </FadeInSlideUp>
         </div>
       </div>
-      <div className="absolute top-0 left-0 w-full h-full opacity-30">
+      <div className="absolute top-0 left-0 w-full h-full opacity-60">
         <video
           className="w-full h-full object-cover"
           playsInline

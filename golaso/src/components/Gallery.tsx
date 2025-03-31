@@ -30,7 +30,7 @@ const Gallery = () => {
     <section id="gallery" className="py-16 px-5">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12">
-          תראו בעצמכם איזה מוצלחים האירועים של גלעד!!
+          טעימה קטנה מהאירועים שלנו
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {images.map((image, index) => (
