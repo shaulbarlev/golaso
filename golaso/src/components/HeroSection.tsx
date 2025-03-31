@@ -1,15 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import { FaTiktok, FaWhatsapp, FaFacebook, FaInstagram } from "react-icons/fa";
-import WordFadeIn from "./WordFadeIn";
-import FadeInSlideUp from "./FadeInSlideUp";
-import FadeInScaleDown from "./FadeInScaleDown";
+import { WordFadeIn, FadeInSlideUp, FadeInScaleDown } from "./animations";
 import SoccerBall from "./SoccerBall";
 const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="bg-gradient-to-b from-sky-900 to-sky-500 py-20 relative overflow-hidden h-[95vh]"
+      className="bg-gradient-to-b from-sky-900 to-sky-500 py-10 relative overflow-hidden h-screen"
     >
       <div className="max-w-7xl mx-auto px-4 text-center z-30 relative">
         <FadeInScaleDown>
@@ -72,7 +70,7 @@ const HeroSection = () => {
             </a>
           </FadeInSlideUp>
           <FadeInScaleDown delay={3}>
-            <SoccerBall className="m-10" />
+            <SoccerBall className="md:m-15 sm:m-4 m-5" />
           </FadeInScaleDown>
         </div>
       </div>

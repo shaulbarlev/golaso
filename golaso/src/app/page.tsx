@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
 import Reccomendations from "@/components/Reccomendations";
 
-import FadeInSection from "@/components/FadeInSection";
+import { FadeInSection } from "@/components/animations";
 
 const Home = () => {
   return (
