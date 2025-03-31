@@ -37,9 +37,29 @@ export function SoccerBall({ className }: SoccerBallProps) {
         }
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <a onClick={() => setIsAnimating(true)} className="text-[8em]">
-          ⚽
-        </a>
+        <motion.div
+          animate={
+            isAnimating
+              ? {}
+              : {
+                  rotate: [0, 20, -17, 10, -8, 3, 0, 0],
+                  translateY: [0, 0, -20, 0, 0],
+                }
+          }
+          transition={{
+            delay: 3.3,
+            duration: 2,
+            times: [0, 0.1, 0.2, 0.4, 3],
+            repeat: Infinity,
+            repeatType: "loop",
+            repeatDelay: 2,
+            ease: "easeInOut",
+          }}
+        >
+          <a onClick={() => setIsAnimating(true)} className="text-[8em]">
+            ⚽
+          </a>
+        </motion.div>
       </motion.div>
     </div>
   );
