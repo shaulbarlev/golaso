@@ -40,11 +40,11 @@ const EventsSection = () => {
   ];
 
   return (
-    <section id="events" className="py-16 px-5 scroll-mt-20">
+    <section id="events" className="py-16 px-2 scroll-mt-20">
       <h3 className="text-3xl font-semibold text-center mb-10">
         גולאסו מתאים לכל סוג אירוע!
       </h3>
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-3">
         <div className="grid grid-cols-1 gap-6">
           {eventTypes.map((event) => (
             <div key={event.id}>

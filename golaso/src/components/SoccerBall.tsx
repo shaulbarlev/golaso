@@ -56,7 +56,7 @@ export function SoccerBall({ className }: SoccerBallProps) {
             ease: "easeInOut",
           }}
         >
-          <a onClick={() => setIsAnimating(true)} className="text-[8em]">
+          <a onClick={() => setIsAnimating(true)} className="text-7xl">
             ⚽
           </a>
         </motion.div>
