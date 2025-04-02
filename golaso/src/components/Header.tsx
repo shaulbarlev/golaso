@@ -27,11 +27,11 @@ const Header = () => {
       transition={{ duration: 0.35, ease: "easeInOut" }}
       className="text-white z-50 fixed top-0 left-0 right-0"
     >
-      <div className="bg-sky-400 w-60 h-20 mt-5 mx-auto flex flex-row items-center justify-center rounded-full shadow-2xl">
+      <div className="bg-sky-400 w-50 h-15 mt-2 mx-auto flex gap-3 flex-row items-center justify-center rounded-full shadow-2xl">
         <a href="#hero">
-          <LogoText className="w-26" />
+          <LogoText className="w-26 pr-3" />
         </a>
-        <WhatsAppButton className="w-20 mr-3" text="" />
+        <WhatsAppButton className="w-20" text="" />
       </div>
     </motion.header>
   );

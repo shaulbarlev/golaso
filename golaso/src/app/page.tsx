@@ -8,6 +8,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import Photos from "@/components/Photos";
 import Reccomendations from "@/components/Reccomendations";
+import FallingBallsSection from "@/components/FallingBallsSection";
 
 import { FadeInSection } from "@/components/animations";
 
@@ -40,6 +41,7 @@ const Home = () => {
       <main className="bg-white text-gray-800">
         <Header />
         <HeroSection />
+        <FallingBallsSection />
         <FadeInSection>
           <EventsSection />
         </FadeInSection>

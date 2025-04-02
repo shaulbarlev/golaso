@@ -40,7 +40,7 @@ const EventsSection = () => {
   ];
 
   return (
-    <section id="events" className="py-16 px-2 scroll-mt-20">
+    <section id="events" className="py-16 px-2 scroll-mt-30">
       <h3 className="text-3xl font-semibold text-center mb-10">
         גולאסו מתאים לכל סוג אירוע!
       </h3>
