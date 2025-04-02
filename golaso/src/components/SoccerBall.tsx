@@ -47,7 +47,7 @@ export function SoccerBall({ className }: SoccerBallProps) {
             bottom: 0,
           }}
           whileDrag={{ scale: 1.2 }}
-          onDragEnd={(event, info) => setIsAnimating(true)}
+          onDragEnd={() => setIsAnimating(true)}
           animate={
             isAnimating
               ? {}
