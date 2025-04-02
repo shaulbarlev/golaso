@@ -4,26 +4,32 @@ import Gallery from "./Gallery";
 const Photos = () => {
   const images = [
     {
+      id: "nature-landscape-1",
       src: "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba",
       alt: "Nature landscape",
     },
     {
+      id: "forest-path-1",
       src: "https://images.unsplash.com/photo-1682687220199-d0124f48f95b",
       alt: "Forest path",
     },
     {
+      id: "desert-dunes-1",
       src: "https://images.unsplash.com/photo-1682687221248-3116ba6ab483",
       alt: "Desert dunes",
     },
     {
+      id: "ocean-waves-1",
       src: "https://images.unsplash.com/photo-1682687220063-4742bd7fd538",
       alt: "Ocean waves",
     },
     {
+      id: "mountain-lake-1",
       src: "https://images.unsplash.com/photo-1682687220199-d0124f48f95b",
       alt: "Mountain lake",
     },
     {
+      id: "valley-view-1",
       src: "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba",
       alt: "Valley view",
     },
