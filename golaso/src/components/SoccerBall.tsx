@@ -38,6 +38,16 @@ export function SoccerBall({ className }: SoccerBallProps) {
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <motion.div
+          drag
+          // dragSnapToOrigin
+          dragConstraints={{
+            top: -400,
+            left: 0,
+            right: 0,
+            bottom: 0,
+          }}
+          whileDrag={{ scale: 1.2 }}
+          onDragEnd={(event, info) => setIsAnimating(true)}
           animate={
             isAnimating
               ? {}
