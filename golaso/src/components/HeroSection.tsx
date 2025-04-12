@@ -82,7 +82,7 @@ const HeroSection = () => {
           muted
           loop
         >
-          <source src="/video/video1.mp4" type="video/mp4" />
+          <source src="/video/herovideo.mp4" type="video/mp4" />
         </video>
       </div>
     </section>
