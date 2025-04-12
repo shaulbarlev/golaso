@@ -51,9 +51,7 @@ const Home = () => {
         <FadeInSection>
           <ContactSection />
         </FadeInSection>
-        <FadeInSection>
-          <Photos />
-        </FadeInSection>
+        <Photos />
         <Reccomendations />
         <Footer />
       </main>
