@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-
+import Image from "next/image";
 interface SoccerBallProps {
   className?: string;
 }
@@ -34,9 +34,11 @@ export function SoccerBall({ className }: SoccerBallProps) {
           damping: 5,
         }}
       >
-        <img
+        <Image
           src="/img/goal.png"
           alt="soccerball"
+          width={800}
+          height={600}
           className="max-w-[80vw] max-h-[80vh] object-contain"
         />
       </motion.div>

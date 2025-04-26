@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import Head from "next/head";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -41,14 +42,20 @@ const Home = () => {
             </h3>
           </FadeInSection>
           <FadeInSection>
-            <img
+            <Image
               src="/img/camp/flyer.jpeg"
+              alt="Camp flyer"
+              width={800}
+              height={600}
               className="rounded-2xl shadow-xl my-2"
             />
           </FadeInSection>
           <FadeInSection>
-            <img
+            <Image
               src="/img/camp/activities.jpeg"
+              alt="Camp activities"
+              width={800}
+              height={600}
               className="rounded-2xl shadow-xl my-2"
             />
           </FadeInSection>
@@ -60,9 +67,17 @@ const Home = () => {
         </FadeInSection>
         <FadeInSection>
           <div className="p-5">
-            <div className="bg-white/50 rounded-2xl p-5 flex items-center gap-2 w-fit mx-auto">
-              <MdFileDownload />
-              <span>שאלות ותשובות</span>
+            <div className="bg-white/50 rounded-2xl p-5 w-fit mx-auto">
+              <a
+                href="
+              /שאלות תשובות קייטנה.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <MdFileDownload />
+                שאלות ותשובות
+              </a>
             </div>
           </div>
         </FadeInSection>
