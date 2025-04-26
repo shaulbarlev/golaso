@@ -2,13 +2,10 @@ import React from "react";
 import Head from "next/head";
 import Header from "@/components/Header";
 import EventsSection from "@/components/EventsSection";
-import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import Photos from "@/components/Photos";
-import Reccomendations from "@/components/Reccomendations";
-import FallingBallsSection from "@/components/FallingBallsSection";
 
 import { FadeInSection } from "@/components/animations";
 
