@@ -8,26 +8,51 @@ interface SoccerBallProps {
 
 export function SoccerBall({ className }: SoccerBallProps) {
   const [isAnimating, setIsAnimating] = useState(false);
+  const [showGoal, setShowGoal] = useState(false);
 
   useEffect(() => {
     if (isAnimating) {
       setTimeout(() => {
-        window.location.assign("#events");
-      }, 800);
+        setShowGoal(true);
+        // Hide the goal after 2 seconds
+        setTimeout(() => {
+          setShowGoal(false);
+        }, 2000);
+      }, 200);
     }
   }, [isAnimating]);
 
   return (
     <div className={className}>
       <motion.div
+        className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-screen h-screen pointer-events-none z-50 flex items-center justify-center"
+        initial={{ opacity: 0, scale: 0.2 }}
+        animate={showGoal ? { opacity: 1, scale: 1 } : {}}
+        transition={{
+          type: "spring",
+          stiffness: 100,
+          damping: 5,
+        }}
+      >
+        <img
+          src="/img/goal.png"
+          alt="soccerball"
+          className="max-w-[80vw] max-h-[80vh] object-contain"
+        />
+      </motion.div>
+      <motion.div
         initial={{ opacity: 100 }}
         animate={isAnimating ? { opacity: 0 } : { opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <h3 className="text-white font-bold text-2xl mb-2">
-          בעטו בכדור וגלו עוד!
-        </h3>
+        <h3 className="text-white font-bold text-2xl mb-2">בעטו בכדור!</h3>
       </motion.div>
+      <motion.div
+        className="w-full h-full bg-black/50 fixed top-0 left-0 z-40 pointer-events-none"
+        initial={{ opacity: 0 }}
+        animate={showGoal ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      ></motion.div>
       <motion.div
         initial={{ opacity: 100, y: 0 }}
         animate={

@@ -1,8 +1,16 @@
 import React from "react";
 import Head from "next/head";
 import Header from "@/components/Header";
+import EventsSection from "@/components/EventsSection";
 import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import Photos from "@/components/Photos";
+import Reccomendations from "@/components/Reccomendations";
+import FallingBallsSection from "@/components/FallingBallsSection";
+
+import { FadeInSection } from "@/components/animations";
 
 const Home = () => {
   return (
@@ -31,7 +39,20 @@ const Home = () => {
       </Head>
 
       <main className="bg-white text-gray-800">
-        <HeroSection />
+        <Header />
+        <FadeInSection>
+          <EventsSection />
+        </FadeInSection>
+        <FadeInSection>
+          <AboutSection />
+        </FadeInSection>
+        <FadeInSection>
+          <ContactSection />
+        </FadeInSection>
+        <div className="bg-sky-200">
+          <Photos imgdir="/img/gallery" title="טעימה קטנה מהאירועים שלנו" />
+        </div>
+        <Photos imgdir="/img/recommendations" title="לקוחות ממליצים" />
         <Footer />
       </main>
     </>
